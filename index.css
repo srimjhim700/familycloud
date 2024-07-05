@@ -1,0 +1,61 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+body{
+    background: url('./errorgif.gif') no-repeat center center fixed;
+    background-size: cover;
+   
+}
+.bluetint {
+    position: fixed;
+    top: 0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: #1a41dc6f;
+    z-index: 100;
+
+}
+img{
+    width: 60px;
+   margin-bottom: -20px;
+   
+}
+.error-text{
+    width: 70vw;
+    display: flexbox;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 200;
+
+}
+.error-heading{
+    font-family: "Kalam", cursive;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100px;
+  text-shadow: 2px  2px 2px white;
+  color: aliceblue;
+}
+.error-description{
+    font-family: "Kalam", cursive;
+  font-weight: 300;
+  font-style: normal;
+  color: aliceblue;
+}
+@media (max-width : 480px){
+    .error-heading{
+        line-height:50px;
+    }
+    
+}
