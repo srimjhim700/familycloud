@@ -25,6 +25,25 @@ img{
    margin-bottom: -20px;
    
 }
+
+button{
+    padding: 10px ;
+    background-color: aliceblue;
+    border-radius: 100px;
+    border-color: aliceblue;
+    color: rgb(0, 0, 11);
+    font-size: large;
+    font-family: "Kalam", cursive;
+    margin-top: 25px;
+    box-shadow: 2px 2px 2px 2px rgb(0, 0, 0,0.8);
+    transition:0.25s ease-in-out;
+    cursor: pointer;
+}
+
+button:hover{
+    transform: scale(1.15);
+
+}
 .error-text{
     width: 70vw;
     display: flexbox;
@@ -53,9 +72,27 @@ img{
   font-style: normal;
   color: aliceblue;
 }
+.message{
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    justify-content: space-between;
+    align-items: center;
+
+    input{
+        width: 18vw;
+        background-color: aliceblue;
+      
+    }
+    textarea{
+        width: 18vw;
+        background-color: aliceblue;
+
+    }
+}
 @media (max-width : 480px){
     .error-heading{
         line-height:50px;
     }
     
-}
+} 

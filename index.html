@@ -14,6 +14,53 @@
         <p class="error-description">
             Please Contact me using this button if you want to access our Family cloud
         </p>
+        <div class="message" >
+
+            <input id="name" type="text" placeholder="Name">
+            <textarea  id="text-message" rows="5" cols="33" placeholder="Send me a message"></textarea>
+            <button onclick="sendNotification() ">Send Notification</button>
+        </div>
+       
+        
     </div>
 </body>
+<script>
+    
+    async function sendNotification(){
+
+        const namebox=document.getElementById('name');
+        const messagebox=document.getElementById('text-message');
+
+        const name=namebox.value;
+        const message=messagebox.value;
+
+        namebox.value=null;
+        messagebox.value=null;
+        const data={
+                'name':name,
+                'message':message
+            }
+
+        console.log(name, " ",message);
+        const notificationResponse = fetch ('https://family-cloud-worker.srimjhim700.workers.dev/', {
+            method:'POST',
+            headers : {
+
+                'Content-Type': 'aapplication/json',
+
+            },
+            body:JSON.stringify(data)
+            
+        }).then(response => {
+            if(!response.ok ){
+                throw new Error('response was not ok')
+            }
+            return response.json();
+        }).then(data => {
+            alert('Notification Sent Successfully')
+        }).catch(error => {
+            alert('notification not sent successfully ');
+        });
+    }
+</script>
 </html>
